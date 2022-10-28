@@ -1,0 +1,129 @@
+body {
+	background-color: lightpink;
+}
+
+.header {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.topWord {
+	font-size: xx-large;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font: bolder;
+	text-shadow: 0 0 5px lightblue;
+}
+
+.greeting {
+	font-size: small;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font: bold;
+	text-shadow: 0 0 2px aliceblue;
+}
+
+.intro-house {
+	font-size: xx-small;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font: bold;
+	text-shadow: 0 0 2px aliceblue;
+}
+
+.sortingHat {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 200px;
+	flex-direction: column;
+}
+.pick-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#button {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 60px;
+	background-color: black;
+	color: lightgoldenrodyellow;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.first-years {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: medium;
+	font-display: bold;
+	text-shadow: 0 0 2px aliceblue;
+}
+
+.house-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.house-names {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: large;
+	font-display: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: 0 0 2px aliceblue;
+}
+
+#Gryffindor {
+	background-color: crimson;
+	color: goldenrod;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#Hufflepuff {
+	background-color: gold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#Ravenclaw {
+	background-color: darkblue;
+	color: burlywood;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#Slytherin {
+	background-color: darkgreen;
+	color: silver;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#app {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 50%;
+}
+.card {
+	margin: 20px;
+	padding: 5px;
+	border-radius: 10px;
+	text-align: center;
+}
+.newCards {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	size: 200px;
+}
+.CardTitles {
+	display: flex;
+	justify-content: space-evenly;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: large;
+	text-shadow: 0 0 5px lightblue;
+	font: bolder;
+}
