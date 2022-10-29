@@ -107,11 +107,14 @@ body {
 	flex-wrap: wrap;
 	border-radius: 50%;
 }
-.card {
+#cards {
 	margin: 20px;
 	padding: 5px;
 	border-radius: 10px;
 	text-align: center;
+	display: table-row;
+	flex-wrap: wrap;
+	justify-content: left;
 }
 .newCards {
 	display: flex;
@@ -126,4 +129,13 @@ body {
 	font-size: large;
 	text-shadow: 0 0 5px lightblue;
 	font: bolder;
+}
+
+#evil {
+	justify-content: safe;
+	display: table-row;
+	flex-wrap: wrap;
+	margin: 20px;
+	padding: 5px;
+	border-radius: 10px;
 }

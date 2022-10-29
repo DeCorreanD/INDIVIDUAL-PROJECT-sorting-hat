@@ -57,14 +57,16 @@ const houses = {
 };
 
 const students = [
-	{ name: "Bellatrix Lestrange", house: "VoldemortsArmy" },
-	{ name: "Cedric Diggory", house: "Hufflepuff" },
-	{ name: "Luna Lovegood", house: "Ravenclaw" },
-	{ name: "Draco Malfoy", house: "Slytherin" },
-	{ name: "Albus Dumbledore", house: "Gryffindor" },
+	{ id: 1, name: "Cedric Diggory", house: "Hufflepuff" },
+	{ id: 2, name: "Luna Lovegood", house: "Ravenclaw" },
+	{ id: 3, name: "Draco Malfoy", house: "Slytherin" },
+	{ id: 4, name: "Albus Dumbledore", house: "Gryffindor" },
 ];
 
+const expelled = [{ id: 1, name: "Tom Riddle", house: "VoldemortsArmy" }];
+
 const renderToDom = (divId, htmlToRender) => {
+	console.log(divId, htmlToRender);
 	const selectedDiv = document.querySelector(divId);
 	selectedDiv.innerHTML = htmlToRender;
 };
@@ -82,13 +84,14 @@ const cardOnDom = (students) => {
     <p class="traits">${houses[student.house].traits}</p>
     <p class="animal">${houses[student.house].color}</p>
     <p class="card-text">${houses[student.house].animal}</p>
-    <a href="#" class="btn btn-danger">Expelled</a>
+    <a href="#" class="btn btn-danger" id="deleteStudent--">Expelled</a>
   </div>
 </div>`;
 	}
 	return domString;
 };
 renderToDom("#cards", cardOnDom(students));
+renderToDom("#evil", cardOnDom(expelled));
 
 cardOnDom(students);
 
@@ -106,11 +109,24 @@ const sortButton = () => {
 	];
 	const randomnumber = Math.floor(Math.random() * houses.length);
 	const randomHouse = houses[randomnumber];
-	const newStudent = { name: name, house: randomHouse };
+	// const randomId = Math.floor(Math.random() * students.id.length);
+	const newStudent = { id: name + randomHouse, name: name, house: randomHouse };
 	students.push(newStudent);
 	renderToDom("#cards", cardOnDom(students));
 };
 
+// Delete Button
+const deleteButton = document.querySelector("#cards");
+console.log("deleteButton", deleteButton);
+cards.addEventListener("click", (e) => {
+	console.log("delete");
+	if (e.target.id.includes("deleteStudent")) {
+		const [, id] = e.target.id.split("--");
+		const index = students.findIndex((e) => e.id === Number(id));
+		students.splice(index, 1);
+		cardOnDom(students);
+	}
+});
 // Search
 // .filter()
 
